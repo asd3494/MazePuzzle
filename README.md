@@ -78,6 +78,8 @@ Alternatively, you can use the **RedPanda Dev C++** IDE, which comes with Raylib
 
 **Before you start playing, please read the `MazePuzzle食用指南.pdf` file included in the project for detailed gameplay instructions and controls.**
 
+**Main Program**: The game's main program is `main.cpp`. After setting up Raylib and your compiler, you need to compile and run this file to play the game.
+
 ## 🤝 Contributing
 
 If you discover any bugs, please feel free to [submit an issue](https://github.com/asd3494/MazePuzzle/issues)!
@@ -165,6 +167,8 @@ brew install raylib
 对于编译器，GCC、Clang或者带GCC的MSVC都可以。
 
 **在开始游玩前，请务必阅读项目内的 `MazePuzzle食用指南.pdf` 文件，以了解具体的操作方法和游玩指南。**
+
+**主程序**：游戏的主程序是 `main.cpp`。在配置好Raylib和编译器后，你需要编译并运行这个文件才能进行游戏。
 
 如果你发现了Bug，欢迎[提交issue](https://github.com/asd3494/MazePuzzle/issues)！
 
