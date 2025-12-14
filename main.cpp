@@ -18,7 +18,7 @@ int level = 0;
 
 namespace put_Chinese{
 	int fileSize;
-	unsigned char *fontFileData = LoadFileData("resource/LXGWWenKai-Light.ttf", &fileSize);
+	unsigned char *fontFileData = LoadFileData("resource/LXGWWenKai-Regular.ttf", &fileSize);
 	Image img=GenImageColor(800,600,WHITE);
 	void ch_text(const char text[],Vector2 xy,float space,float size,Color color){//中文打印函数
 		int codepointsCount;
