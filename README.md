@@ -76,7 +76,7 @@ Alternatively, you can use the **RedPanda Dev C++** IDE, which comes with Raylib
 
 **Compiler**: GCC, Clang, or MSVC with the GCC toolchain should work.
 
-**Before you start playing, please read the `teach.pdf` file included in the project for detailed gameplay instructions and controls.**
+**Before you start playing, please read the `MazePuzzle食用指南.pdf` file included in the project for detailed gameplay instructions and controls.**
 
 ## 🤝 Contributing
 
@@ -164,7 +164,7 @@ brew install raylib
 
 对于编译器，GCC、Clang或者带GCC的MSVC都可以。
 
-**在开始游玩前，请务必阅读项目内的 `teach.pdf` 文件，以了解具体的操作方法和游玩指南。**
+**在开始游玩前，请务必阅读项目内的 `MazePuzzle食用指南.pdf` 文件，以了解具体的操作方法和游玩指南。**
 
 如果你发现了Bug，欢迎提交issue！
 
