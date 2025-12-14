@@ -586,7 +586,7 @@ void game() {
 			DrawText(title, titleX + 1, titleY + 1, titleSize, LIGHTGRAY);
 			DrawText(title, titleX, titleY, titleSize, WHITE);
 			DrawText(title, titleX - 1, titleY - 1, titleSize, Fade(WHITE, 0.3f));
-			DrawText("by slch", titleX + 60, titleY + 50, 12, YELLOW);
+			DrawText("by asd3494", titleX + 60, titleY + 50, 12, YELLOW);
 			ch_text("敌人数量   ", {hei * 1.5f - 120, wei * 1.5f + 20}, 0, 20, BLACK);
 			static bool edit = false;
 			Rectangle rect = { hei * 1.5f - 40, wei * 1.5f + 20, 100, 30 };
