@@ -1,206 +1,169 @@
 # MazePuzzle - 迷宫冒险游戏
-
 **导航 / Navigation**: [English](#english) | [中文](#中文)
 
 ---
 
 ## English
 
-### 🎮 About The Game
-**MazePuzzle** is a rogue-like maze adventure game built with **Raylib**. It features procedurally generated mazes, real-time enemy encounters, and a unique dual-gameplay system.
+### 🎮 Game Introduction
 
-### ✨ Key Features
-*   **Procedural Generation**: Every run creates a unique 100x100 maze using a recursive division algorithm.
-*   **Dual Game Modes**:
-    *   **Stealth Mode**: Avoid enemies and find the exit.
-    *   **Killer Mode** (unlocked with 50+ enemies): Eliminate all enemies to win.
-*   **Quick-Time Combat**: When an enemy catches you, press SPACE within 0.3 seconds to counterattack!
-*   **Progressive Difficulty**: 5 levels that affect exit placement and maze complexity.
-*   **Scalable Challenge**: The number of enemies is theoretically limited only by your system's memory, offering extreme challenges for powerful hardware *(performance degrades with very high counts)*.
-*   **Localized UI**: Chinese text display with fallback to English.
+Welcome to MazePuzzle! This game has been in development for nearly 1-2 months and features a level system, an enemy system, and dual modes: Stealth and Killer. The maze is procedurally generated using a recursive division algorithm.
 
-### 🚀 Quick Start
+The initial development and iterations of this project were primarily conducted within the Luogu team [MOLI Game Studio](https://luogu.com.cn). Future updates will also be prioritized and synchronized there first. You're welcome to join the team for early access.
 
-#### Prerequisites
-*   **C++ Compiler** (GCC, Clang, MSVC with MinGW)
-*   **Raylib Development Library**
+### 🖥️ Start Menu
 
-#### Installation & Build
+As shown below:
 
-**1. Install Raylib**
-*   **Ubuntu/Debian**: `sudo apt install libraylib-dev`
-*   **macOS**: `brew install raylib`
-*   **Windows**: Download from [Raylib Releases](https://github.com/raysan5/raylib/releases)
-*   **All Platforms**: See [Official Raylib Installation](https://www.raylib.com/)
+![](https://img.cdn1.vip/i/693e76154e87a_1765701141.webp)
 
-**2. Clone & Compile**
-```bash
+The design draws inspiration from **Minecraft**, featuring a rotating level background and a pseudo-3D title. The yellow text "by asd3494" is displayed below. The input box next to "敌人数量" (Enemy Count) allows you to set the number of enemies, defaulting to `1`. Press Enter when ready to begin.
 
-\# Clone the repository
+**Note**: Closing the window from the start menu will exit the application directly.
 
-git clone https://github.com/your-username/MazePuzzle.git
+### 🎯 In-Game
 
-cd MazePuzzle
+#### Modes
 
+##### 🚶‍♂️ Stealth Mode
+The standard gameplay mode. Your objective is to locate the exit and reach it. An on-screen arrow constantly points toward the exit, serving as your guide.
 
+##### 🔪 Killer Mode
+**Trigger Condition**: Number of enemies **≥ 50**
 
-\# Compile the game (Linux/macOS/Windows MinGW example)
+Screenshot:
 
-g++ -o maze\_puzzle main.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+![](https://img.cdn1.vip/i/693e7767cfe63_1765701479.png)
 
+You can win by either defeating all enemies or meeting the Stealth Mode victory condition. Additionally, each enemy you defeat manually grants you one "auto-defeat" charge. This charge is consumed only if you fail a counter-attack against an enemy.
 
+#### ☠️ Enemies
 
-\# Run the game
+Enemies are hostile entities in the game. Some lie in wait within walls, attacking as you pass by, while others roam randomly until you get too close.
 
-./maze\_puzzle
+They appear as red circles slightly smaller than your character:
 
-```
-*Note: Linker flags may vary slightly by system. Refer to Raylib documentation for your specific platform.*
+![](https://img.cdn1.vip/i/693e7bf00ff55_1765702640.png)
 
-#### 🎯 Basic Controls
-*   **Movement**: `WASD` or Arrow Keys
-*   **Counterattack**: `SPACE` (when prompted)
-*   **Menu Navigation**: `ENTER`, `ESCAPE`
+They initiate an attack when you come within a distance of 1.0 unit. The attack has a 0.3-second wind-up period, during which you can press the **SPACE** bar to counter-attack. Here is how they look when attacking:
 
-### 🧩 Project Structure
-```
+![](https://img.cdn1.vip/i/693c09514e035_1765542225.png)
 
-MazePuzzle/
+Pressing SPACE successfully will defeat all enemies currently attacking you. However, if an enemy completes its attack and damages you, it's fatal, and you will lose the game immediately.
 
-├── main.cpp              # Main game source code
+## 🚀 Quick Start
 
-├── resource/             # Game assets (fonts, textures)
+This game is built using **Raylib**. If you haven't installed it yet, follow the instructions below:
 
-│   ├── LXGWWenKai-Light.ttf
+### Installing Raylib
 
-│   ├── brik.png
+*   **Linux (Ubuntu/Debian)**:
+    ```bash
+    sudo apt install libraylib-dev
+    ```
+*   **macOS**:
+    First, ensure you have [Homebrew](https://brew.sh/) installed. Then run:
+    ```bash
+    brew install raylib
+    ```
+*   **Windows & Others**:
+    1.  Go to the [Raylib Releases page](https://github.com/raysan5/raylib/releases).
+    2.  Download the pre-compiled library package for your system (e.g., `raylib-x.x.x_win64_mingw-w64.zip` for Windows).
 
-│   ├── door.png
+Alternatively, you can use the **RedPanda Dev C++** IDE, which comes with Raylib pre-configured.
+1.  [Download RedPanda Dev C++](https://wwe.lanzoui.com/b01os0mwd).
+2.  Open the project file with this IDE to compile and run.
 
-│   └── ...
+**Compiler**: GCC, Clang, or MSVC with the GCC toolchain should work.
 
-├── README.md            # This file
+## 🤝 Contributing
 
-└── LICENSE              # MIT License
+If you discover any bugs, please feel free to [submit an issue](https://github.com/你的用户名/MazePuzzle/issues)!
 
-```
+We also welcome suggestions related to gameplay, features, or improvements.
 
-### 📄 License
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-**Raylib** is used under its own [zlib/libpng license](https://github.com/raysan5/raylib/blob/master/LICENSE).
+Let's make MazePuzzle better together!
 
 ---
 
-## 中文
+# 中文
 
-### 🎮 游戏简介
-**MazePuzzle** 是一款使用 **Raylib** 开发的Roguelike迷宫冒险游戏。游戏包含随机生成的迷宫、实时敌人遭遇战和独特的双模式玩法。
+欢迎你浏览迷宫冒险游戏(`MazePuzzle`)！
 
-### ✨ 核心特色
-*   **随机迷宫生成**：采用递归分割算法，每次游戏生成独一无二的100x100迷宫。
-*   **双游戏模式**：
-    *   **潜行模式**：躲避敌人，寻找出口。
-    *   **杀手模式**（敌人≥50时解锁）：击败所有敌人方可获胜。
-*   **即时反击战斗**：被敌人抓住时，在0.3秒内按下空格键进行反击！
-*   **渐进难度**：5个关卡等级，影响出口位置和迷宫复杂度。
-*   **可扩展的挑战**：敌人数量在理论上仅受系统内存限制，为追求极限的玩家提供了可能性（注意：数量极高时会导致性能下降）。
-*   **本地化界面**：支持中文显示，失败时自动回退到英文。
+## 🎮游戏介绍
 
-### 🚀 快速开始
+这个游戏开发历程将近1\~2个月，包含关卡系统、敌人系统、潜伏/杀手双模式。采用递归分割法生成迷宫。游戏由我自己本人完成。此游戏之前的开发和迭代均在Luogu团队[MOLI摸鱼游戏公司](https://luogu.com.cn)中实现，之后的项目也会优先同步在此团队，如果想尽快尝试可以加入。
 
-#### 环境准备
-*   **C++编译器**（GCC、Clang 或带MinGW的MSVC）
-*   **Raylib开发库**
+### 开始页面
 
-#### 安装与编译
+如图：
 
-**1. 安装Raylib**
-*   **Ubuntu/Debian**: `sudo apt install libraylib-dev`
-*   **macOS**: `brew install raylib`
-*   **Windows**: 从 [Raylib发布页面](https://github.com/raysan5/raylib/releases) 下载
-*   **所有平台**：参考 [Raylib官方安装指南](https://www.raylib.com/)
+![](https://img.cdn1.vip/i/693e76154e87a_1765701141.webp)
 
-**2. 下载与编译**
+这里的设计参考了**Minecraft**，用旋转的关卡背景+伪3D标题，下方有用黄字标注的**by asd3494**，同时，“敌人数量”后面的输入框是用来设定敌人数的。默认值为`1`，当你确认无误想要开始时按下Enter即可。
+
+在开始页面退出窗口会直接退出。
+
+### 游戏中
+
+#### 模式
+
+##### 🚶‍♂️潜行模式
+
+一般的游玩模式，你需要找到出口并走到那里，在游玩时会有一个箭头时刻指向出口，你可以以此做参照。
+
+##### 🔪杀手模式
+
+触发条件：**敌人数≥50**
+
+图片
+
+![](https://img.cdn1.vip/i/693e7767cfe63_1765701479.png)
+
+击败所有敌人或者达成潜伏模式的通关条件都可以通关。同时你每手动击败一个敌人都会赠送一个自动击败敌人的机会，但这次机会只会在你反击失败的时候消耗。
+
+#### ☠️敌人
+
+敌人在这个游戏里是一种敌对实体，它们有的会一直潜伏在墙里等待你经过的时候把你干掉，有的会在地图中随机游荡直到你与它距离过近。
+
+它的外貌为一个比你的角色稍小的红色小球，如图：
+
+![](https://img.cdn1.vip/i/693e7bf00ff55_1765702640.png)
+
+当你与它的距离不足1时它们会对你发动攻击，但它们攻击从开始到完成需要0.3s的时间，在此期间你可以按空格反击它们，如下是它们攻击时的样子：
+
+![](https://img.cdn1.vip/i/693c09514e035_1765542225.png)
+
+按下空格后，所有正在攻击你的敌人就会倒下。但如果它们已经伤害到了你，那是致命的，你会直接输掉整局游戏。
+
+## 🎗️提示
+
+这个游戏是基于RayLib的，如果你还没有这个库。那么你可以按照如下方式安装：
+
+如果你是Linux及其衍生系统用户，那么如下输入如下命令可以下载：
 ```bash
-
-\# 克隆仓库
-
-git clone https://github.com/your-username/MazePuzzle.git
-
-cd MazePuzzle
-
-
-
-\# 编译游戏（Linux/macOS/Windows MinGW示例）
-
-g++ -o maze\_puzzle main.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
-
-
-
-\# 运行游戏
-
-./maze\_puzzle
-
-```
-*注意：链接器参数可能因系统略有不同，请根据你的平台参考Raylib文档。*
-
-#### 🎯 基本操作
-*   **移动**：`WASD` 或 方向键
-*   **反击**：`空格键`（当提示出现时）
-*   **菜单导航**：`回车键`，`ESC键`
-
-### 🧩 项目结构
+sudo apt install libraylib-dev
 ```
 
-MazePuzzle/
-
-├── main.cpp              # 游戏主源代码
-
-├── resource/             # 游戏资源（字体、纹理）
-
-│   ├── LXGWWenKai-Light.ttf
-
-│   ├── brik.png
-
-│   ├── door.png
-
-│   └── ...
-
-├── README.md            # 本文件
-
-└── LICENSE              # MIT 许可证
-
+如果你是MacOS用户，你必须先安装Homebrew，然后输入如下命令
+```command
+brew install raylib
 ```
 
-### 🤝 参与贡献
-欢迎提交 Issue 和 Pull Request！
-1.  Fork 本仓库
-2.  创建功能分支 (`git checkout -b feature/AmazingFeature`)
-3.  提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4.  推送到分支 (`git push origin feature/AmazingFeature`)
-5.  开启一个 Pull Request
+如果你是Windows用户或其它，那么按照如下方式下载：
 
-### 📄 许可证
-本项目采用 **MIT 许可证** - 查看 [LICENSE](LICENSE) 文件了解详情。
+1. [进入此链接](https://github.com/raysan5/raylib/releases)
+2. 选择一个你喜欢的版本下载。
 
-**Raylib** 在其自身的 [zlib/libpng 许可证](https://github.com/raysan5/raylib/blob/master/LICENSE) 下使用。
+或者你可以使用RedPandaDevC++这个IDE来运行，它自带RayLib。
 
-### ❓ 常见问题
-**Q：编译时提示“找不到 -lraylib”怎么办？**
-A：这表示Raylib未正确安装。请确保完全按照官方指南为你操作系统完成了安装。
+1. [前往此处下载](https://wwe.lanzoui.com/b01os0mwd)
+2. 用它打开此文件即可运行
 
-**Q：字体显示为方块或乱码？**
-A：确保 `resource/` 文件夹包含 `LXGWWenKai-Light.ttf` 字体文件。如果缺失，游戏将自动回退到系统默认字体。
+对于编译器，GCC、Clang或者带GCC的MSVC都可以。
 
-**Q：如何选择敌人数量？**
-A：在游戏开始菜单中，使用方向键或鼠标调整“敌人数量”选框（1-10个）。
+如果你发现了Bug，欢迎提交issue！
 
-**Q：游戏最多能设置多少个敌人？会很卡吗？**
-A：从代码逻辑上讲，敌人数量可以达到C++ `int` 类型的上限（约21亿），但这只是一个理论值。实际上，当敌人数量过多（例如超过100个）时，会显著增加CPU和内存负担，导致游戏帧率下降。建议根据自己电脑的性能，在开始菜单中设置一个合理的数量（通常10-50个）以获得流畅体验。
+也可以提一些游戏相关的建议。
 
----
-
-**祝你在迷宫中冒险愉快！** 🎮
-
-[返回顶部 ↑](#mazepuzzle---迷宫冒险游戏)
+让我们把MazePuzzle变得越来越好！
