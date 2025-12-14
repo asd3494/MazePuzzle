@@ -80,7 +80,7 @@ Alternatively, you can use the **RedPanda Dev C++** IDE, which comes with Raylib
 
 ## 🤝 Contributing
 
-If you discover any bugs, please feel free to [submit an issue](https://github.com/你的用户名/MazePuzzle/issues)!
+If you discover any bugs, please feel free to [submit an issue](https://github.com/asd3494/MazePuzzle/issues)!
 
 We also welcome suggestions related to gameplay, features, or improvements.
 
@@ -166,7 +166,7 @@ brew install raylib
 
 **在开始游玩前，请务必阅读项目内的 `MazePuzzle食用指南.pdf` 文件，以了解具体的操作方法和游玩指南。**
 
-如果你发现了Bug，欢迎提交issue！
+如果你发现了Bug，欢迎[提交issue](https://github.com/asd3494/MazePuzzle/issues)！
 
 也可以提一些游戏相关的建议。
 
