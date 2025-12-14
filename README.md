@@ -76,6 +76,8 @@ Alternatively, you can use the **RedPanda Dev C++** IDE, which comes with Raylib
 
 **Compiler**: GCC, Clang, or MSVC with the GCC toolchain should work.
 
+**Before you start playing, please read the `teach.pdf` file included in the project for detailed gameplay instructions and controls.**
+
 ## 🤝 Contributing
 
 If you discover any bugs, please feel free to [submit an issue](https://github.com/你的用户名/MazePuzzle/issues)!
@@ -86,13 +88,13 @@ Let's make MazePuzzle better together!
 
 ---
 
-# 中文
+## 中文
 
 欢迎你浏览迷宫冒险游戏(`MazePuzzle`)！
 
 ## 🎮游戏介绍
 
-这个游戏开发历程将近1\~2个月，包含关卡系统、敌人系统、潜伏/杀手双模式。采用递归分割法生成迷宫。游戏由我自己本人完成。此游戏之前的开发和迭代均在Luogu团队[MOLI摸鱼游戏公司](https://luogu.com.cn)中实现，之后的项目也会优先同步在此团队，如果想尽快尝试可以加入。
+这个游戏开发历程将近1~2个月，包含关卡系统、敌人系统、潜伏/杀手双模式。采用递归分割法生成迷宫。游戏由我自己本人完成。此游戏之前的开发和迭代均在Luogu团队[MOLI摸鱼游戏公司](https://luogu.com.cn)中实现，之后的项目也会优先同步在此团队，如果想尽快尝试可以加入。
 
 ### 开始页面
 
@@ -161,6 +163,8 @@ brew install raylib
 2. 用它打开此文件即可运行
 
 对于编译器，GCC、Clang或者带GCC的MSVC都可以。
+
+**在开始游玩前，请务必阅读项目内的 `teach.pdf` 文件，以了解具体的操作方法和游玩指南。**
 
 如果你发现了Bug，欢迎提交issue！
 
