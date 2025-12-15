@@ -11,6 +11,7 @@
 #include <random>
 #include <array>
 #include <fstream>
+#include <algorithm>
 #define hei 80
 #define wei 80
 using namespace std;
@@ -293,7 +294,7 @@ public:
 			moves -= v;
 			newp.x += dirs[dir][0] * v;
 			newp.y += dirs[dir][1] * v;
-		} else {
+		} else if (Vector2Distance(pos, p.pos) > 10.0) {
 			int rnd = dist(rng);
 			if (rnd == 0) {
 				moves = 1;
@@ -311,6 +312,22 @@ public:
 				moves = 1;
 				dir = 3;
 			}
+		} else {
+			int mxd = dist(rng);
+			Vector2 mxv = {pos.x + dirs[mxd][0], pos.y + dirs[mxd][1]};
+			if (!mz.check(mxv.x, mxv.y))
+				mxv = pos;
+			for (int i = 0; i < 4; i ++) {
+				Vector2 pa = {pos.x + dirs[i][0], pos.y + dirs[i][1]};
+				if (!mz.check(pa.x, pa.y))
+					pa = pos;
+				if (Vector2Distance(pa, p.pos) < Vector2Distance(mxv, p.pos)) {
+					mxv = pa;
+					mxd = i;
+				}
+			}
+			dir = mxd;
+			moves = 1;
 		}
 		newp.x = max(1.1f, min((float)(mz.size() - 1) + 0.9f, newp.x));
 		newp.y = max(1.1f, min((float)(mz.size() - 1) + 0.9f, newp.y));
